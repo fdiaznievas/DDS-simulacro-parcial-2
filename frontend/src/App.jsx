@@ -1,8 +1,10 @@
 import { useState } from 'react'
-import Ciudades from './components/ciudades'
 import { Routes, Route, Link } from 'react-router-dom'
-import Home from './components/Home'
 import './App.css'
+import Ciudades from './components/ciudades'
+import Ciudad from './components/Ciudad'
+import Home from './components/Home'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/ciudades" element={<Ciudades/>} />
+          <Route path="/ciudad/:id" element={<Ciudad/>} />
         </Routes>
       </div>
     </>

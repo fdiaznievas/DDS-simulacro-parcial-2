@@ -1,6 +1,7 @@
 import { use, useEffect, useState } from 'react';
-import axios from 'axios';
+import { Link } from 'react-router-dom';
 import { FaTrash, FaEdit } from 'react-icons/fa';
+import axios from 'axios';
 
 function Ciudades() {
     const [ciudades, setCiudades] = useState([]);
@@ -42,6 +43,13 @@ function Ciudades() {
     return(
         <div>
             <h2>Ciudades</h2>
+
+            <div className="container col-auto my-3 text-end">
+                <Link to="/pelicula/0" className="btn btn-primary">
+                    <i className="bi bi-plus-circle"></i>
+                    + Nueva Película
+                </Link>
+            </div>
 
             <table className='table table-striped table-hover table-bordered'>
                 <thead className='table-primary'>
